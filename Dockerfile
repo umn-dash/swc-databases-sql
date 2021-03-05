@@ -2,8 +2,6 @@ FROM jupyter/datascience-notebook:d990a62010ae
 
 MAINTAINER David Naughton <naughton@umn.edu>
 
-USER root
-
 USER $NB_UID
 RUN mkdir "/home/${NB_USER}/Desktop" && \
     cd "/home/${NB_USER}/Desktop" && \
