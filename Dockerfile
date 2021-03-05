@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook:6d42503c684f
+FROM jupyter/datascience-notebook:d990a62010ae
 
 MAINTAINER David Naughton <naughton@umn.edu>
 
@@ -15,7 +15,6 @@ RUN rm /etc/dpkg/dpkg.cfg.d/excludes && \
 USER $NB_UID
 RUN mkdir "/home/${NB_USER}/Desktop" && \
     cd "/home/${NB_USER}/Desktop" && \
-    wget https://swcarpentry.github.io/shell-novice/data/data-shell.zip && \
-    unzip data-shell.zip && \
+    wget https://swcarpentry.github.io/sql-novice-survey/files/survey.db && \
     chmod -R g+rw "/home/${NB_USER}/Desktop" && \
     echo "PS1='\$ '" >> ~/.bashrc
