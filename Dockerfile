@@ -1,4 +1,5 @@
-FROM jupyter/datascience-notebook:d990a62010ae
+#FROM jupyter/datascience-notebook:9e60c5159dbc
+FROM jupyter/datascience-notebook
 
 MAINTAINER David Naughton <naughton@umn.edu>
 
