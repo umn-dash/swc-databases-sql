@@ -3,6 +3,10 @@ FROM jupyter/datascience-notebook
 
 MAINTAINER David Naughton <naughton@umn.edu>
 
+USER root
+RUN apt-get update && \
+    apt-get install sqlite3
+
 USER $NB_UID
 RUN mkdir "/home/${NB_USER}/Desktop" && \
     cd "/home/${NB_USER}/Desktop" && \
